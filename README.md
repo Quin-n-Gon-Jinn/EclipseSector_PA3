@@ -1,57 +1,25 @@
-# Eclipse Sector - Producto Académico 3
+# Eclipse Sector — avance PA4
 
-Proyecto desarrollado en Unity para el curso de Desarrollo de Videojuegos.
+Continuación del proyecto 3D PA3 en Unity **6000.6.0f1**, URP y C#.
 
-## Descripción
+**Estado:** código de misión e integración preparados; compilación Unity, gameplay y ejecutable pendientes de validación local. La escena PA3 se conserva.
 
-Eclipse Sector es un entorno tridimensional interactivo de exploración ambientado en una instalación tecnológica en estado de emergencia.
+Empieza por [Docs/LEEME_PRIMERO.md](Docs/LEEME_PRIMERO.md). Abre el proyecto en Unity y usa **Tools > Eclipse Final > 1 Preparar misión PA4** para crear la copia final con terminales, IA, HUD, sonidos y NavMesh. Luego prueba el juego y genera Windows x64 desde el mismo menú.
 
-El jugador recorre una sala inicial, un pasillo de emergencia, una zona con desnivel y finalmente la sala del reactor.
+## Misión
 
-La narrativa se comunica principalmente mediante la iluminación, la composición del escenario, los objetos y los efectos visuales.
+Repara tres terminales, estabiliza el reactor y regresa a extracción antes del colapso. Un centinela patrulla, persigue al detectar al jugador y busca su última posición conocida. Hay integridad, límite de tiempo, victoria, derrota, pausa y reinicio.
 
-## Tecnologías
+WASD · mouse · Shift · espacio · E · Esc.
 
-- Unity 6
-- Universal Render Pipeline (URP)
-- Cinemachine
-- Timeline
-- Shader Graph
-- C#
-- Git / GitHub
+## Documentación
 
-## Funcionalidades implementadas
+- [Preparación y estado real](Docs/LEEME_PRIMERO.md)
+- [Casos de prueba pendientes](Docs/PRUEBAS.md)
+- [Guion del video de 6 minutos](Docs/GUION_VIDEO.md)
 
-- Entorno 3D explorable
-- Controlador en primera persona
-- Cámara FPS
-- Escenario con verticalidad
-- Materiales diferenciados
-- Iluminación Baked y Realtime
-- Post Processing
-  - Bloom
-  - Vignette
-  - Color Adjustments
-- Sistema de partículas
-- Luces de emergencia
-- Shader Graph personalizado para el reactor
-- Animación mediante Time y Sine
-- Interacción con el reactor mediante la tecla E
-- Cinemática introductoria con Cinemachine y Timeline
-
-## Controles
-
-- WASD: movimiento
-- Mouse: cámara
-- Shift: correr
-- Espacio: saltar
-- E: interactuar con el reactor
-- Esc: liberar el cursor
-
-## Estructura del recorrido
-
-Sala inicial → Pasillo de emergencia → Rampa → Sala del reactor
+El informe de entrega debe completarse con capturas y pruebas observadas. No confundir validación estática con ejecutable probado. El build no se versiona en git; distribuir completa la carpeta Windows.
 
 ## Autor
 
-Anthony
+Franco Anthony Ayala Odar. Evidenciar en el informe los intentos de coordinación grupal y la ejecución individual si corresponde.

@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class ReactorInteraction : MonoBehaviour
 {
+    public bool externallyControlled;
     public Transform player;
     public Renderer reactorRenderer;
     public Light reactorLight;
@@ -38,7 +39,7 @@ public class ReactorInteraction : MonoBehaviour
 
     private void Update()
     {
-        if (activated || player == null || Keyboard.current == null)
+        if (externallyControlled || activated || player == null || Keyboard.current == null)
             return;
 
         float distance = Vector3.Distance(player.position, transform.position);
@@ -47,8 +48,9 @@ public class ReactorInteraction : MonoBehaviour
             ActivateReactor();
     }
 
-    private void ActivateReactor()
+    public void ActivateReactor()
     {
+        if (activated) return;
         activated = true;
 
         if (runtimeMaterial != null)
@@ -67,9 +69,14 @@ public class ReactorInteraction : MonoBehaviour
         Debug.Log("ECLIPSE: Reactor activado.");
     }
 
+    private void OnDestroy()
+    {
+        if (runtimeMaterial != null) Destroy(runtimeMaterial);
+    }
+
     private void OnGUI()
     {
-        if (activated || player == null)
+        if (externallyControlled || activated || player == null)
             return;
 
         float distance = Vector3.Distance(player.position, transform.position);

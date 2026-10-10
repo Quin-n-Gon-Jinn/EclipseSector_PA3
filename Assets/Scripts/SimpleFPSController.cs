@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class SimpleFPSController : MonoBehaviour
 {
     [Header("Movement")]
+    public bool missionControlsCursor;
     public float moveSpeed = 4.5f;
     public float sprintSpeed = 7f;
     public float gravity = -20f;
@@ -32,10 +33,11 @@ public class SimpleFPSController : MonoBehaviour
 
     private void Update()
     {
+        if (Cursor.lockState != CursorLockMode.Locked) return;
         HandleMovement();
         HandleLook();
 
-        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (!missionControlsCursor && Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
