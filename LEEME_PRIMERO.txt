@@ -1,0 +1,76 @@
+INVERNADERO 7 | PROYECTO NUEVO PARA UNITY
+Version objetivo: Unity 6000.6.0f1, Built-in Render Pipeline.
+
+IMPORTANTE
+Este ZIP contiene el proyecto fuente. NO contiene un ejecutable ya compilado.
+Proyecto abierto y probado por el autor en Unity y en Windows el 17-10-2026.
+Se documento victoria en el ejecutable y se confirmaron audio, derrota y reinicio.
+El informe final, el video y la publicacion del repositorio quedan pendientes.
+
+ABRIR (NO CREES UN PROYECTO URP)
+1. Descomprime el ZIP por completo en una carpeta local, por ejemplo:
+   C:\UnityProjects\Invernadero7
+2. Localiza la carpeta que contiene Assets, Packages y ProjectSettings.
+3. Unity Hub > Proyectos > Add / Agregar > Add project from disk.
+4. Selecciona ESA carpeta Invernadero7. Abrela con Unity 6000.6.0f1.
+   Si Hub pide elegir Editor, usa la version que ya tienes instalada.
+5. Espera a que Unity termine de importar y compilar.
+6. Menu superior: Invernadero 7 > 1 - Abrir escena del juego.
+   Alternativa: doble clic en Assets/Invernadero7/Scenes/Invernadero7.unity.
+7. Pulsa PLAY y abre la pestaña Game. Pulsa COMENZAR.
+
+ANTES DE PLAY
+Es normal que solo aparezca un objeto en Hierarchy y no se vea un escenario.
+El escenario completo, el jugador, la IA y los sonidos se crean por codigo
+al iniciar Play. Durante Play podras inspeccionar todos sus objetos.
+Los cambios a esos objetos durante Play no se guardan al detener el juego.
+Para cambios persistentes modifica los scripts.
+
+CONTROLES
+WASD mover | Raton mirar | Shift correr | E interactuar | Esc pausa/cerrar panel.
+Los puzzles se resuelven pulsando sus botones con el raton.
+Si el raton no gira la camara, haz clic en la ventana Game.
+SALIR cierra el ejecutable; en el Editor usa el boton Play para detenerlo.
+
+OBJETIVO
+Repara los tres paneles de colores y activa la consola de entrada.
+Tiempo limite: 6 minutos. Energia inicial: 100. Contacto robot: -25 puntos
+con 2.5 segundos de proteccion entre impactos. Pierdes si tiempo o energia = 0.
+El tiempo y la IA siguen activos al abrir un puzzle. Esc pausa el juego
+solo cuando no tienes un panel abierto; primero cierra el panel.
+
+SOLUCIONES (PARA TU PRUEBA Y DEMOSTRACION)
+Ambar, izquierda al inicio: presion 6, confirmar.
+Azul, derecha a mitad: HOJA > SOL > GOTA > FLOR.
+Violeta, izquierda al fondo: A = GOTA, B = HOJA, C = SOL; conectar.
+Vuelve a la consola del extremo de entrada y pulsa E.
+
+GENERAR EL EJECUTABLE
+1. Deten Play.
+2. Menu Invernadero 7 > 2 - Generar ejecutable Windows.
+3. Se abrira Builds/Windows dentro del proyecto al terminar.
+4. Ejecuta Invernadero7.exe FUERA de Unity y completa una partida.
+5. Para entregar comprime TODA la carpeta Windows: el .exe por si solo
+   no funciona; necesita Invernadero7_Data, UnityPlayer.dll y demas archivos.
+Si falta soporte de plataforma: Unity Hub > Instalaciones > engranaje de
+6000.6.0f1 > Add modules > Windows Build Support. El menu usa backend Mono.
+
+SI APARECE UN ERROR
+- Espera a que termine la importacion. Abre Window > General > Console.
+- Envia una captura del PRIMER error rojo y su mensaje completo.
+- Error sobre Input System: Edit > Project Settings > Player > Other Settings
+  > Active Input Handling = Input Manager (Old) o Both. Reinicia si lo pide.
+  Este proyecto ya viene configurado con el sistema antiguo.
+- Materiales rosados: abre este proyecto completo, no lo copies a uno URP.
+  El proyecto utiliza materiales del Built-in Render Pipeline.
+- Pantalla vacia: abre la escena indicada y comprueba que pulsaste Play.
+- Sin sonido: revisa Mute Audio en Game y el volumen de Windows.
+- Abre la carpeta del proyecto fuera de OneDrive si hay errores de permisos.
+
+CONTENIDO
+Assets/Invernadero7/Scripts: 7 archivos de codigo para los sistemas de juego.
+Assets/Invernadero7/Editor: herramientas para abrir escena y compilar.
+Assets/Invernadero7/Scenes: escena de inicio lista.
+Assets/Resources: material Standard para incluir su shader en el Build.
+GUIA_ENTREGA.md: pruebas, arquitectura y guion propuesto para tu video.
+No se utilizaron archivos del juego Centinela ni assets comerciales.

@@ -1,0 +1,31 @@
+REVISION DEL PAQUETE
+
+Comprobado fuera de Unity:
+- Sintaxis de los 8 archivos C# (7 runtime y 1 editor).
+- JSON del manifiesto de dependencias.
+- Referencia GUID entre escena y script de inicio.
+- Configuracion del sistema de entrada legacy.
+- Conectividad geometrica de los 239 nodos navegables de la rejilla.
+- Acceso a los puntos de patrulla y aproximacion a los terminales.
+- Correspondencia entre pistas y soluciones de los puzzles.
+
+Pendiente EN UNITY:
+- Compilacion contra las librerias del motor.
+- Importacion, materiales, rotulos y disposicion visual.
+- Movimiento, colisiones, interaccion y estados de IA.
+- Audio, particulas, UI, pausa, victoria, derrota y reinicio.
+- Rendimiento medido y Build de Windows fuera del Editor.
+
+No hay Unity Editor instalado en el entorno de preparacion.
+Este registro no sustituye las pruebas reales para el informe.
+
+CORRECCION 17-10-2026
+Eliminada la referencia inexistente com.unity.modules.inputlegacy del manifiesto.
+Se mantiene Active Input Handling en Input Manager (Old).
+Compilacion y prueba en Unity siguen pendientes.
+
+ACTUALIZACION 17-10-2026
+El autor abrio el proyecto en Unity y completo una partida en Windows.
+Capturas: progreso 3/3, particulas y victoria con 75 % de energia.
+El autor confirmo las pruebas de audio, derrota y reinicio.
+Los apartados pendientes anteriores describen la revision previa al playtest.
